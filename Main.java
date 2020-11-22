@@ -7,24 +7,25 @@ class Main {
     Scanner in = new Scanner(System.in);
     int x = aleatoria.nextInt(100) + 1;
 
-    System.out.println("私は魔法のように1から100までの数（整数）を作成しました");
-    System.out.println("それが何であるかを推測してみてください！");
-    System.out.println("私はそれがあなたにかかる推測の数を数えます。");
+    System.out.println("I have magically conjured up a number from 1-100. ");
+    System.out.println("I want you to guess it!");
+    System.out.println(
+        "I will count how many guesses it takes and then tell you once you get it right. I'm not sure why. Maybe to humiliate you.");
     int count = 1;
     int guess = 0;
     do {
       count++;
-      System.out.println("番号を推測して、ここに入力します:");
+      System.out.println("Guess the number and enter it here: ");
       guess = in.nextInt();
       if (guess > x) {
-        System.out.println("高すぎる〜");
+        System.out.println("Too high〜");
       } else if (guess < x) {
-        System.out.println("低すぎる〜");
+        System.out.println("Too low〜");
       } else if (guess == x) {
-        System.out.println("正しい!!!");
+        System.out.println("You got it!!!");
       }
     } while (guess != x);
-    System.out.println("私が作成した数は" + x + "でした");
-    System.out.println("あなたは数を推測するために" + count + "回の試みが必要でした");
+    System.out.println("The number was " + x + ".");
+    System.out.println("It took you " + count + " guesses to get it right.");
   }
 }
